@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#120b18"/>
+      <stop offset="0.48" stop-color="#251027"/>
+      <stop offset="1" stop-color="#080b16"/>
+    </linearGradient>
+    <radialGradient id="saffronGlow" cx="22%" cy="26%" r="48%">
+      <stop offset="0" stop-color="#f5a623" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#f5a623" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx="82%" cy="76%" r="52%">
+      <stop offset="0" stop-color="#e83d82" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#e83d82" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5a623" stop-opacity="0"/>
+      <stop offset="0.22" stop-color="#f5a623" stop-opacity="0.72"/>
+      <stop offset="0.52" stop-color="#f7d56c" stop-opacity="0.9"/>
+      <stop offset="0.8" stop-color="#e83d82" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#e83d82" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="phulkari" width="96" height="96" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M48 12 L60 36 L84 48 L60 60 L48 84 L36 60 L12 48 L36 36 Z" fill="none" stroke="#f7d56c" stroke-opacity="0.095" stroke-width="3"/>
+      <circle cx="48" cy="48" r="5" fill="#e83d82" fill-opacity="0.12"/>
+    </pattern>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="5" result="blurred"/>
+      <feMerge><feMergeNode in="blurred"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#night)"/>
+  <rect width="1920" height="1080" fill="url(#saffronGlow)"/>
+  <rect width="1920" height="1080" fill="url(#pinkGlow)"/>
+  <rect width="1920" height="1080" fill="url(#phulkari)"/>
+
+  <g opacity="0.22" filter="url(#blur)">
+    <ellipse cx="270" cy="160" rx="180" ry="90" fill="#f5a623"/>
+    <ellipse cx="1650" cy="870" rx="220" ry="110" fill="#e83d82"/>
+  </g>
+
+  <g fill="none" stroke="url(#wave)" stroke-linecap="round" filter="url(#softGlow)">
+    <path d="M-80 714 C120 714 120 604 260 604 S400 824 560 824 S700 522 850 522 S1000 770 1150 770 S1290 640 1430 640 S1590 820 1750 820 S1900 704 2010 704" stroke-width="4" opacity="0.68"/>
+    <path d="M-80 744 C120 744 140 676 270 676 S405 784 550 784 S695 596 850 596 S1000 730 1150 730 S1300 680 1435 680 S1590 778 1740 778 S1900 736 2010 736" stroke-width="1.5" opacity="0.48"/>
+    <path d="M-50 330 C170 330 180 270 330 270 S480 390 630 390 S780 220 940 220 S1090 350 1240 350 S1390 260 1530 260 S1690 380 1980 300" stroke-width="1.5" opacity="0.32"/>
+  </g>
+
+  <g fill="#f7d56c" opacity="0.62">
+    <circle cx="176" cy="194" r="2"/><circle cx="318" cy="112" r="3"/><circle cx="1480" cy="170" r="2"/><circle cx="1712" cy="312" r="3"/><circle cx="1542" cy="944" r="2"/><circle cx="382" cy="902" r="2"/>
+  </g>
+
+  <rect x="48" y="48" width="1824" height="984" rx="28" fill="none" stroke="#f7d56c" stroke-opacity="0.12"/>
+  <rect width="1920" height="1080" fill="#05050a" opacity="0.16"/>
+</svg>
